@@ -1,0 +1,6 @@
+[submodule "usb-type-c-kicad-lib"]
+	path = usb-type-c-kicad-lib
+	url = https://github.com/manisteinn/usb-type-c-kicad-lib.git
+[submodule "usb-type-c.pretty"]
+	path = usb-type-c.pretty
+	url = https://github.com/manisteinn/usb-type-c.pretty

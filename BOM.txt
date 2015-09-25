@@ -1,0 +1,7 @@
+Bill of Materials - USB-C board for TMK Alt Controller Rev1
+===========================================================
+
+R1		0603 5.1K
+R2		0603 5.1K
+J1		JAE DX07S024JJ2
+

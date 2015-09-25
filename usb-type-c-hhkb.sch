@@ -1,0 +1,322 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:usb-type-c-hhkb-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 3450 2200 0    60   ~ 0
+Receptacle\n(B6, B7 not connected in plug)
+NoConn ~ 5000 3550
+$Comp
+L GND #PWR01
+U 1 1 559E46E1
+P 5300 6050
+F 0 "#PWR01" H 5300 5800 50  0001 C CNN
+F 1 "GND" H 5300 5900 50  0000 C CNN
+F 2 "" H 5300 6050 60  0000 C CNN
+F 3 "" H 5300 6050 60  0000 C CNN
+	1    5300 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR02
+U 1 1 559E479C
+P 5300 5300
+F 0 "#PWR02" H 5300 5150 50  0001 C CNN
+F 1 "VCC" H 5300 5450 50  0000 C CNN
+F 2 "" H 5300 5300 60  0000 C CNN
+F 3 "" H 5300 5300 60  0000 C CNN
+	1    5300 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR03
+U 1 1 55B41751
+P 3250 5700
+F 0 "#PWR03" H 3250 5450 50  0001 C CNN
+F 1 "GND" H 3250 5550 50  0000 C CNN
+F 2 "" H 3250 5700 60  0000 C CNN
+F 3 "" H 3250 5700 60  0000 C CNN
+	1    3250 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 55B417D5
+P 2950 5550
+F 0 "R2" V 2850 5550 50  0000 C CNN
+F 1 "R5.1K" V 2950 5550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2880 5550 30  0001 C CNN
+F 3 "" H 2950 5550 30  0000 C CNN
+	1    2950 5550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R1
+U 1 1 55B418AD
+P 2950 5350
+F 0 "R1" V 3030 5350 50  0000 C CNN
+F 1 "R5.1K" V 2950 5350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2880 5350 30  0001 C CNN
+F 3 "" H 2950 5350 30  0000 C CNN
+	1    2950 5350
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR04
+U 1 1 559E4607
+P 5150 3750
+F 0 "#PWR04" H 5150 3500 50  0001 C CNN
+F 1 "GND" H 5150 3600 50  0000 C CNN
+F 2 "" H 5150 3750 60  0000 C CNN
+F 3 "" H 5150 3750 60  0000 C CNN
+	1    5150 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L USB_TYPE_C J1
+U 1 1 559E44CF
+P 4150 3100
+F 0 "J1" H 4150 3100 60  0000 C CNN
+F 1 "USB_TYPE_C" H 4150 3350 60  0000 C CNN
+F 2 "usb-type-c:JAE-DX07S024JJ2-oshpark" H 4150 3100 60  0001 C CNN
+F 3 "" H 4150 3100 60  0000 C CNN
+	1    4150 3100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5000 3450
+NoConn ~ 5000 2650
+NoConn ~ 5000 2750
+NoConn ~ 3250 3250
+NoConn ~ 3250 2650
+NoConn ~ 3250 2750
+NoConn ~ 3250 3550
+NoConn ~ 3250 3450
+$Comp
+L GND #PWR05
+U 1 1 55CE80F0
+P 3100 3750
+F 0 "#PWR05" H 3100 3500 50  0001 C CNN
+F 1 "GND" H 3100 3600 50  0000 C CNN
+F 2 "" H 3100 3750 60  0000 C CNN
+F 3 "" H 3100 3750 60  0000 C CNN
+	1    3100 3750
+	1    0    0    -1  
+$EndComp
+Text Label 3250 3150 2    60   ~ 0
+USB_D-
+Text Label 3250 3050 2    60   ~ 0
+USB_D+
+Text Label 5000 3050 0    60   ~ 0
+USB_D-
+Text Label 5000 3150 0    60   ~ 0
+USB_D+
+Text Label 5100 5750 0    60   ~ 0
+USB_D+
+Text Label 5100 5600 0    60   ~ 0
+USB_D-
+$Comp
+L GND #PWR06
+U 1 1 55CE84BD
+P 4150 4000
+F 0 "#PWR06" H 4150 3750 50  0001 C CNN
+F 1 "GND" H 4150 3850 50  0000 C CNN
+F 2 "" H 4150 4000 60  0000 C CNN
+F 3 "" H 4150 4000 60  0000 C CNN
+	1    4150 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR07
+U 1 1 55CE853F
+P 5150 2600
+F 0 "#PWR07" H 5150 2350 50  0001 C CNN
+F 1 "GND" H 5150 2450 50  0000 C CNN
+F 2 "" H 5150 2600 60  0000 C CNN
+F 3 "" H 5150 2600 60  0000 C CNN
+	1    5150 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR08
+U 1 1 55CE856C
+P 3100 2600
+F 0 "#PWR08" H 3100 2350 50  0001 C CNN
+F 1 "GND" H 3100 2450 50  0000 C CNN
+F 2 "" H 3100 2600 60  0000 C CNN
+F 3 "" H 3100 2600 60  0000 C CNN
+	1    3100 2600
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5000 2950
+Text Label 5000 3250 0    60   ~ 0
+CC2
+Text Label 3250 2950 2    60   ~ 0
+CC1
+Text Label 2550 5550 0    60   ~ 0
+CC2
+Wire Wire Line
+	5150 3750 5150 3650
+Wire Wire Line
+	5150 3650 5000 3650
+Wire Wire Line
+	3250 3650 3100 3650
+Wire Wire Line
+	3100 3650 3100 3750
+Wire Wire Line
+	5150 2600 5150 2550
+Wire Wire Line
+	5150 2550 5000 2550
+Wire Wire Line
+	3100 2600 3100 2550
+Wire Wire Line
+	3100 2550 3250 2550
+Text Label 2550 5350 0    60   ~ 0
+CC1
+Wire Wire Line
+	2800 5350 2550 5350
+Wire Wire Line
+	2800 5550 2550 5550
+Wire Wire Line
+	3250 5350 3250 5700
+Wire Wire Line
+	3250 5550 3100 5550
+Wire Wire Line
+	3250 5350 3100 5350
+Connection ~ 3250 5550
+$Comp
+L CONN_01X01 P4
+U 1 1 55CE9390
+P 5650 5450
+F 0 "P4" H 5800 5450 50  0000 C CNN
+F 1 "VCC" V 5750 5450 50  0001 C CNN
+F 2 "pins:PIN_1_SQUARE" H 5650 5450 60  0001 C CNN
+F 3 "" H 5650 5450 60  0000 C CNN
+	1    5650 5450
+	1    0    0    -1  
+$EndComp
+Text Notes 2500 5050 0    60   ~ 0
+Upstream Facing Port\nCC1,CC2 Rd=5.1KOhm
+$Comp
+L CONN_01X01 P3
+U 1 1 55CE973B
+P 5650 5600
+F 0 "P3" H 5800 5600 50  0000 C CNN
+F 1 "D-" V 5750 5600 50  0001 C CNN
+F 2 "pins:PIN_1" H 5650 5600 60  0001 C CNN
+F 3 "" H 5650 5600 60  0000 C CNN
+	1    5650 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X01 P2
+U 1 1 55CE975F
+P 5650 5750
+F 0 "P2" H 5800 5750 50  0000 C CNN
+F 1 "D+" V 5750 5750 50  0001 C CNN
+F 2 "pins:PIN_1" H 5650 5750 60  0001 C CNN
+F 3 "" H 5650 5750 60  0000 C CNN
+	1    5650 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X01 P1
+U 1 1 55CE9786
+P 5650 5900
+F 0 "P1" H 5800 5900 50  0000 C CNN
+F 1 "GND" V 5750 5900 50  0001 C CNN
+F 2 "pins:PIN_1" H 5650 5900 60  0001 C CNN
+F 3 "" H 5650 5900 60  0000 C CNN
+	1    5650 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 6050 5300 5900
+Wire Wire Line
+	5300 5900 5450 5900
+Wire Wire Line
+	5450 5750 5100 5750
+Wire Wire Line
+	5450 5600 5100 5600
+Wire Wire Line
+	5450 5450 5300 5450
+Wire Wire Line
+	5300 5450 5300 5300
+Text Notes 4950 5000 0    60   ~ 0
+HHKB ext USB connector
+$Comp
+L VCC #PWR09
+U 1 1 55CF30B2
+P 5600 2650
+F 0 "#PWR09" H 5600 2500 50  0001 C CNN
+F 1 "VCC" H 5600 2800 50  0000 C CNN
+F 2 "" H 5600 2650 60  0000 C CNN
+F 3 "" H 5600 2650 60  0000 C CNN
+	1    5600 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 2850 5600 2850
+Wire Wire Line
+	5600 2650 5600 3350
+Connection ~ 5600 2850
+$Comp
+L VCC #PWR010
+U 1 1 55CF3116
+P 2650 2600
+F 0 "#PWR010" H 2650 2450 50  0001 C CNN
+F 1 "VCC" H 2650 2750 50  0000 C CNN
+F 2 "" H 2650 2600 60  0000 C CNN
+F 3 "" H 2650 2600 60  0000 C CNN
+	1    2650 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 2850 2650 2850
+Wire Wire Line
+	2650 2600 2650 3350
+Connection ~ 2650 2850
+Wire Wire Line
+	2650 3350 3250 3350
+Wire Wire Line
+	5600 3350 5000 3350
+$EndSCHEMATC
