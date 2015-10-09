@@ -1,4 +1,4 @@
-Bill of Materials - USB-C board for TMK Alt Controller Rev1
+Bill of Materials - USB-C board for TMK Alt Controller Rev2
 ===========================================================
 
 R1		0603 5.1K

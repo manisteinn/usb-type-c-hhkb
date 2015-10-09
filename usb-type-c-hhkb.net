@@ -1,13 +1,13 @@
 (export (version D)
   (design
-    (source /home/mani/usb-type-c-hhkb/usb-type-c-hhkb.sch)
-    (date "tis 22 sep 2015 02:24:16")
+    (source /home/mani/Projects/HHKB/hhkb-type-c/git/usb-type-c-hhkb/usb-type-c-hhkb.sch)
+    (date "fre  9 okt 2015 19:08:48")
     (tool "Eeschema 4.0.0-rc1-stable")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
         (title)
         (company)
-        (rev)
+        (rev 2)
         (date)
         (source usb-type-c-hhkb.sch)
         (comment (number 1) (value ""))
@@ -30,7 +30,7 @@
     (comp (ref J1)
       (value USB_TYPE_C)
       (footprint usb-type-c:JAE-DX07S024JJ2-oshpark)
-      (libsource (lib usb-type-c-hhkb-cache) (part USB_TYPE_C))
+      (libsource (lib usb-type-c) (part USB_TYPE_C))
       (sheetpath (names /) (tstamps /))
       (tstamp 559E44CF))
     (comp (ref P4)
@@ -58,12 +58,23 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 55CE9786)))
   (libparts
-    (libpart (lib usb-type-c-hhkb-cache) (part USB_TYPE_C)
-      (description "USB Type C connector")
+    (libpart (lib conn) (part CONN_01X01)
+      (footprints
+        (fp Pin_Header_Straight_1X01)
+        (fp Pin_Header_Angled_1X01)
+        (fp Socket_Strip_Straight_1X01)
+        (fp Socket_Strip_Angled_1X01))
+      (fields
+        (field (name Reference) P)
+        (field (name Value) CONN_01X01))
+      (pins
+        (pin (num 1) (name P1) (type passive))))
+    (libpart (lib usb-type-c) (part USB_TYPE_C)
       (fields
         (field (name Reference) U)
         (field (name Value) USB_TYPE_C))
       (pins
+        (pin (num 0) (name Shield) (type passive))
         (pin (num A1) (name GND) (type input))
         (pin (num A2) (name TX1+) (type input))
         (pin (num A3) (name TX1-) (type input))
@@ -87,8 +98,7 @@
         (pin (num B9) (name VBUS) (type input))
         (pin (num B10) (name RX1-) (type input))
         (pin (num B11) (name RX1+) (type input))
-        (pin (num B12) (name GND) (type input))
-        (pin (num ~) (name Shield) (type passive))))
+        (pin (num B12) (name GND) (type input))))
     (libpart (lib device) (part R)
       (description Resistor)
       (footprints
@@ -99,21 +109,10 @@
         (field (name Value) R))
       (pins
         (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib conn) (part CONN_01X01)
-      (footprints
-        (fp Pin_Header_Straight_1X01)
-        (fp Pin_Header_Angled_1X01)
-        (fp Socket_Strip_Straight_1X01)
-        (fp Socket_Strip_Angled_1X01))
-      (fields
-        (field (name Reference) P)
-        (field (name Value) CONN_01X01))
-      (pins
-        (pin (num 1) (name P1) (type passive)))))
+        (pin (num 2) (name ~) (type passive)))))
   (libraries
-    (library (logical usb-type-c-hhkb-cache)
-      (uri usb-type-c-hhkb-cache.lib))
+    (library (logical usb-type-c)
+      (uri usb-type-c-kicad-lib/usb-type-c.lib))
     (library (logical device)
       (uri /usr/share/kicad/library/device.lib))
     (library (logical conn)
@@ -130,7 +129,7 @@
       (node (ref P1) (pin 1))
       (node (ref J1) (pin B1))
       (node (ref J1) (pin A1))
-      (node (ref J1) (pin ~))
+      (node (ref J1) (pin 0))
       (node (ref R2) (pin 2))
       (node (ref J1) (pin B12))
       (node (ref J1) (pin A12)))

@@ -12,18 +12,30 @@ USB-C connector footprint modified for oshpark (they don't support overlapping d
 
 <a href="https://imgur.com/a/JwNwm">Rev1 image gallery</a>
 
+Changelog
+---------
+Rev 2
+- Added connector keepout area and filled GND zones connected to connector shield
+- Moved vias from under connector to between pad rows
+- CC1/CC2 pads marked
+- Upper shield mounting holes adjusted, footprint DX07S024JJ2-oshpark-cutpads added to library, original kept for other non-cut boards
+- Other small adjustments
+
 Todo
 ----
-- Rev1 failed upper plated slots (needs some trimming to fit the connector), replace with larger TH pads
-- Place vias between A/B pad rows
-- Mark CC1/CC2 on R1/R2 pads
+- ~~Rev1 failed upper plated slots (needs some trimming to fit the connector), replace with larger TH pads~~
+- ~~Place vias between A/B pad rows (middle of rows Y offset: 0.735mm from center of A pads)~~
+- ~~Mark CC1/CC2 on R1/R2 pads~~
 - Larger version (extended left) with power source switching (qi charging etc)
 
 Notes
 -----
 git commands for cloning submodules (usb-type-c-kicad-lib, usb-type-c.pretty):
 
-    git clone https://github.com/manisteinn/usb-c-hhkb
+    git clone https://github.com/manisteinn/usb-type-c-hhkb
     cd usb-type-c-hhkb
     git submodule update --init
 
+or
+
+    git clone --recursive https://github.com/manisteinn/usb-type-c-hhkb
