@@ -14,6 +14,9 @@ USB-C connector footprint modified for oshpark (they don't support overlapping d
 
 Changelog
 ---------
+Rev 3
+- Added thermal relief to type-c connector pads, solid connection caused soldermask fabrication issues
+
 Rev 2
 - Added connector keepout area and filled GND zones connected to connector shield
 - Moved vias from under connector to between pad rows
