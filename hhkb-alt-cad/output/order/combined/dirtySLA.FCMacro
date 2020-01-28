@@ -1,0 +1,22 @@
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+ 
+from PySide import QtCore, QtGui
+ 
+def errorDialog(msg):
+    # Create a simple dialog QMessageBox
+    # The first argument indicates the icon used: one of QtGui.QMessageBox.{NoIcon, Information, Warning, Critical, Question} 
+    diag = QtGui.QMessageBox(QtGui.QMessageBox.Information, '3d print', msg)
+    diag.setWindowModality(QtCore.Qt.ApplicationModal)
+    diag.exec_()
+
+
+rounding = 4
+
+vol = FreeCADGui.Selection.getSelection()[0].Shape.Volume/1000
+slaweight = vol*1.3
+slacost = slaweight*.95
+
+msg = 'Volume:\t\t{1:.{0}}cm3\nDirtySLA weight:\t{2:.{0}}g\nDirtySLA cost:\t\t{3:.{0}} USD\n($0.95 minimum charge per model)'.format(rounding, vol, slaweight, slacost)
+
+errorDialog(msg)

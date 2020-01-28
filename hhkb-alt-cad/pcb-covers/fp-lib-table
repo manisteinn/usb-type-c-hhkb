@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name hhkb-covers)(type KiCad)(uri "$(KIPRJMOD)\\hhkb-covers.pretty")(options "")(descr ""))
+)
